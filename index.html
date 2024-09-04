@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miod z Pod Lasu</title>
+    <title>Miód z Pod Lasu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,25 +78,38 @@
         .pricing-table td {
             background-color: #f7f1da;
         }
+        .bee {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://example.com/bee.gif'); /* Wstaw link do swojego obrazu pszczółki */
+            background-size: cover;
+            animation: fly 10s linear infinite;
+        }
+        @keyframes fly {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(100vw) translateY(-100vh); }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Miod z Pod Lasu</h1>
+        <h1>Miód z Pod Lasu</h1>
     </header>
 
     <nav>
         <a href="#o-miodach">O Miodach</a>
         <a href="#cennik">Cennik</a>
+        <a href="#zamowienie">Zamówienie</a>
         <a href="#kontakt">Kontakt</a>
     </nav>
 
     <section id="o-miodach">
         <h2>O Miodach i Produktach Pszczelich</h2>
-        <p>Miod i produkty pszczelich to naturalne skarby, ktore niosa za soba wiele zdrowotnych korzysci. Miod jest bogaty w antyoksydanty, ktore pomagaja w walce z wolnymi rodnikami, wzmacniaja uklad odpornosciowy i dzialaja przeciwzapalnie. Propolis ma wlasciwosci antybakteryjne, a pylek pszczeli to doskonale zrodlo bialka i witamin.</p>
-        <p>Nasze miody pochodza z najczystszych terenow, gdzie pszczoly zbieraja nektar z kwiatow pelnych zdrowia i energii. Oferujemy miody z roznych kwiatow, kazdy z nich ma unikalny smak i wlasciwosci.</p>
-        <img src="https://example.com/miod1.jpg" alt="Sloik miodu" class="product-image">
-        <img src="https://example.com/miod2.jpg" alt="Miod w plastrze" class="product-image">
+        <p>Miód i produkty pszczelarskie to naturalne skarby, które niosą ze sobą wiele zdrowotnych korzyści. Miód jest bogaty w antyoksydanty, które pomagają w walce z wolnymi rodnikami, wzmacniają układ odpornościowy i działają przeciwzapalnie. Propolis ma właściwości antybakteryjne, a pyłek pszczeli to doskonałe źródło białka i witamin.</p>
+        <p>Nasze miody pochodzą z najczystszych terenów, gdzie pszczoły zbierają nektar z kwiatów pełnych zdrowia i energii. Oferujemy miody z różnych kwiatów, każdy z nich ma unikalny smak i właściwości.</p>
+        <img src="https://example.com/miod1.jpg" alt="Słoik miodu" class="product-image">
+        <img src="https://example.com/miod2.jpg" alt="Miód w plastrze" class="product-image">
     </section>
 
     <section id="cennik">
@@ -107,65 +120,89 @@
                     <th>Produkt</th>
                     <th>Opis</th>
                     <th>Cena</th>
+                    <th>Wybór</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Miod Kremowany</td>
+                    <td>Miód Kremowany</td>
                     <td>Idealny do smarowania pieczywa</td>
-                    <td>45 zl</td>
+                    <td>45 zł</td>
+                    <td><input type="checkbox" name="product" value="Miód Kremowany"> Wybierz</td>
                 </tr>
                 <tr>
-                    <td>Miod Wielokwiatowy</td>
-                    <td>Bogaty w roznorodne aromaty</td>
-                    <td>40 zl</td>
+                    <td>Miód Wielokwiatowy</td>
+                    <td>Bogaty w różnorodne aromaty</td>
+                    <td>40 zł</td>
+                    <td><input type="checkbox" name="product" value="Miód Wielokwiatowy"> Wybierz</td>
                 </tr>
                 <tr>
-                    <td>Miod Lipowy</td>
+                    <td>Miód Lipowy</td>
                     <td>Intensywny smak lipy</td>
-                    <td>50 zl</td>
+                    <td>50 zł</td>
+                    <td><input type="checkbox" name="product" value="Miód Lipowy"> Wybierz</td>
                 </tr>
                 <tr>
-                    <td>Miod Rzepakowy</td>
-                    <td>Delikatny i lagodny</td>
-                    <td>40 zl</td>
+                    <td>Miód Rzepakowy</td>
+                    <td>Delikatny i łagodny</td>
+                    <td>40 zł</td>
+                    <td><input type="checkbox" name="product" value="Miód Rzepakowy"> Wybierz</td>
                 </tr>
                 <tr>
-                    <td>Miod Akacjowy</td>
-                    <td>Przezroczysty i slodki</td>
-                    <td>45 zl</td>
+                    <td>Miód Akacjowy</td>
+                    <td>Przezroczysty i słodki</td>
+                    <td>45 zł</td>
+                    <td><input type="checkbox" name="product" value="Miód Akacjowy"> Wybierz</td>
                 </tr>
                 <tr>
-                    <td>Miod Odsklepiony</td>
-                    <td>Swiezy, z naturalnym aromatem</td>
-                    <td>70 zl</td>
+                    <td>Miód Odsklepiony</td>
+                    <td>Świeży, z naturalnym aromatem</td>
+                    <td>70 zł</td>
+                    <td><input type="checkbox" name="product" value="Miód Odsklepiony"> Wybierz</td>
                 </tr>
                 <tr>
                     <td>Pierzga</td>
-                    <td>Wartosciowe produkty zdrowotne</td>
-                    <td>190 zl (kg)</td>
+                    <td>Wartościowe produkty zdrowotne</td>
+                    <td>190 zł (kg)</td>
+                    <td><input type="checkbox" name="product" value="Pierzga"> Wybierz</td>
                 </tr>
                 <tr>
                     <td>Kit/Propolis</td>
-                    <td>Produkt o wlasciwosciach leczniczych</td>
-                    <td>400 zl (kg)</td>
+                    <td>Produkt o właściwościach leczniczych</td>
+                    <td>400 zł (kg)</td>
+                    <td><input type="checkbox" name="product" value="Kit/Propolis"> Wybierz</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
+    <section id="zamowienie">
+        <h2>Formularz Zamówienia</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Imię i nazwisko:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Adres e-mail:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="address">Adres dostawy:</label><br>
+            <textarea id="address" name="address" rows="4" required></textarea><br><br>
+            
+            <label for="quantity">Ilość (kg):</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+            
+            <input type="submit" value="Wyślij Zamówienie">
+        </form>
+    </section>
+
     <section id="kontakt">
         <h2>Kontakt</h2>
-        <p>Jesli chcesz zamowic miod lub masz pytania, skontaktuj sie z nami:</p>
         <div class="contact-info">
+            <p>Telefon: <a href="tel:+48505897579">+48 505 897 579</a></p>
             <p>Email: <a href="mailto:miod.z.pod.lasu2002@gmail.com">miod.z.pod.lasu2002@gmail.com</a></p>
-            <p>Telefon: <a href="tel:+48505897579">505 897 579</a></p>
-            <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100093324788815" target="_blank">Miod z Pod Lasu</a></p>
+            <p>Adres: Gościejewo 2, 06-100 Pułtusk</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Miod z Pod Lasu. Wszystkie prawa zastrzezone.</p>
-    </footer>
-</body>
-</html>
+        <p>&copy; 2024 Miód z Pod Lasu. Wszelk
